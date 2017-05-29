@@ -2,6 +2,7 @@ MODIFIED TO:
 
 * Include :5050/hystrix.stream as hystrix stream url
 * Use Kubeflix 1.0.28 
+* Ingress for Hystrix Dashboard in the cluster -> http://hystrix-dashboard.gr8conf.us
 
 Kubeflix: Kubernetes integration of Netflix components
 ------------------------------------------------------
