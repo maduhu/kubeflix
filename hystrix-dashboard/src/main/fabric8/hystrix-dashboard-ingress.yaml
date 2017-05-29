@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hystrix-dashboard
+spec:
+  rules:
+  - host: hystrix-dashboard.gr8conf.us
+    http:
+        paths:
+        - backend:
+            serviceName: hystrix-dashboard
+            servicePort: 80
