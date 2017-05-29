@@ -4,6 +4,10 @@ spring:
 turbine:
   instanceUrlSuffix: :8080/hystrix.stream
   aggregator:
-        clusterConfig: default
+        clusterConfig: default,languageaggregator,githubapi,twitterapi
+        clusters:
+            languageaggregator: default.language-aggregator-api
+            githubapi: default.github-api
+            twitterapi: default.twitter-api
 InstanceDiscovery:
   impl: io.fabric8.kubeflix.turbine.TurbineDiscovery

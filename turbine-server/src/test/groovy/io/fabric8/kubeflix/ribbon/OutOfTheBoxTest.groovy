@@ -89,17 +89,4 @@ class OutOfTheBoxTest extends Specification {
                 .endSubset()
                 .build()
     }
-
-    def "out of the box discovery should include all hystrix.enabled labeled endpoints in the current namespace"() {
-        given:
-            int port = server.embeddedServletContainer.port
-            RestTemplate restTemplate = new TestRestTemplate()
-        when:
-            String response = restTemplate.getForObject("http://localhost:$port/discovery", String.class)
-        then:
-            response != null
-            response.contains("http://ip1:8080/hystrix.stream default:true")
-            response.contains("http://ip2:8080/hystrix.stream default:true")
-            response.contains("http://ip3:8080/hystrix.stream default:true")
-    }
 }
