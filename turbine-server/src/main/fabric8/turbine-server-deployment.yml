@@ -25,6 +25,8 @@ spec:
     spec:
       containers:
       - env:
+        - name: "TURBINE_INSTANCEURLSUFFIX"
+          value: ":5050/hystrix.stream"
         - name: "KUBERNETES_NAMESPACE"
           valueFrom:
             fieldRef:

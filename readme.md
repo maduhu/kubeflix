@@ -1,3 +1,8 @@
+MODIFIED TO:
+
+* Include :5050/hystrix.stream as hystrix stream url
+* Use Kubeflix 1.0.28 
+
 Kubeflix: Kubernetes integration of Netflix components
 ------------------------------------------------------
 
