@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: turbine-server
+spec:
+  rules:
+  - host: turbine.gr8conf.us
+    http:
+        paths:
+        - backend:
+            serviceName: turbine-server
+            servicePort: 80
